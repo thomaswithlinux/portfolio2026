@@ -1,41 +1,63 @@
-# Terminal Portfolio - Tuxplorer 🐧
+<p align="center">
+  <img src="docs/banner.svg" alt="portfolio2026" width="100%">
+</p>
 
-Un portfolio interactif en style terminal Linux, développé avec HTML, CSS et JavaScript vanilla.
+# portfolio2026 — *Terminal Portfolio, Tuxplorer*
 
-## 🌐 Accès
+![HTML5](https://img.shields.io/badge/HTML5-f5b53f?style=flat-square)
+![CSS3](https://img.shields.io/badge/CSS3-f5b53f?style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-f5b53f?style=flat-square)
+![License](https://img.shields.io/github/license/thomaswithlinux/portfolio2026?style=flat-square&color=f5b53f)
+![Last commit](https://img.shields.io/github/last-commit/thomaswithlinux/portfolio2026?style=flat-square&color=f5b53f)
 
-- **GitHub Pages** : https://github.com/devopsthomas
-- **Domaine personnalisé** : https://thomas-letard.me (optionnel)
+Interactive portfolio styled as a Linux terminal, built with HTML, CSS and
+vanilla JavaScript. No framework, no build step.
 
-## 🎯 Fonctionnalités
+**Live:** <https://thomaswithlinux.github.io/portfolio2026/>
 
-- ✅ Interface terminal authentique et interactive
-- ✅ Historique des commandes avec numérotation
-- ✅ Navigation dans l'historique (↑/↓)
-- ✅ Système d'aide (`--help` / `-h`)
-- ✅ Horloge en temps réel avec date et heure
-- ✅ Design sombre professionnel et minimaliste
-- ✅ Responsive sur tous les appareils (mobile, tablet, desktop)
-- ✅ Scrollbar customisée
-- ✅ Code modulaire et facile à personnaliser
+## Table of contents
 
-## 📋 Commandes disponibles
+- [Features](#features)
+- [Available commands](#available-commands)
+- [Project structure](#project-structure)
+- [Installation](#installation)
+- [Deploying to GitHub Pages](#deploying-to-github-pages)
+- [Tech stack](#tech-stack)
+- [Customization](#customization)
+- [Responsive design](#responsive-design)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Author](#author)
 
-| Commande | Description |
-|----------|-------------|
-| `help` ou `?` | Affiche la liste des commandes |
-| `ls` | Liste les commandes disponibles |
-| `whoami` | Affiche les informations personnelles |
-| `hostname` | Affiche le nom d'hôte du portfolio |
-| `date` | Affiche la date et l'heure |
-| `skills` | Affiche les compétences techniques |
-| `about` | À propos de Thomas Letard |
-| `projects` | Liste des projets en cours |
-| `contact` | Informations de contact |
-| `history` | Historique des commandes |
-| `clear` | Efface le terminal et l'historique |
+## Features
 
-### Aide sur une commande
+- Authentic, interactive terminal interface
+- Command history with numbering
+- History navigation (↑/↓)
+- Help system (`--help` / `-h`)
+- Real-time clock with date and time
+- Dark, professional and minimalist design
+- Responsive on every device (mobile, tablet, desktop)
+- Custom scrollbar
+- Modular code, easy to customize
+
+## Available commands
+
+| Command       | Description                          |
+|---------------|--------------------------------------|
+| `help` or `?` | Shows the list of commands           |
+| `ls`          | Lists the available commands         |
+| `whoami`      | Shows personal information           |
+| `hostname`    | Shows the portfolio host name        |
+| `date`        | Shows the date and time              |
+| `skills`      | Shows the technical skills           |
+| `about`       | About Thomas Letard                  |
+| `projects`    | Lists the current projects           |
+| `contact`     | Contact information                  |
+| `history`     | Command history                      |
+| `clear`       | Clears the terminal and the history  |
+
+### Help on a command
 
 ```bash
 user@portfolio:~$ whoami --help
@@ -45,162 +67,160 @@ user@portfolio:~$ skills -h
 Display technical skills and competencies
 ```
 
-## 🗂️ Structure du projet
+## Project structure
 
 ```
-tuxplorer.github.io/
-├── index.html           # Page principale
-├── index.css            # Styles CSS
-├── terminal.js          # Logique du terminal
-├── time.js              # Horloge en temps réel
-├── README.md            # Ce fichier
-├── .gitignore           # Fichiers à ignorer par Git
-├── CNAME                # Configuration du domaine (optionnel)
-└── package.json         # Configuration npm (optionnel)
+portfolio2026/
+├── docs/
+│   └── banner.svg       # README banner
+├── index.html           # Main page
+├── index.css            # Styles
+├── terminal.js          # Terminal logic
+├── time.js              # Real-time clock
+├── package.json         # npm configuration (optional)
+├── .gitignore           # Files ignored by Git
+├── LICENSE              # MIT license
+└── README.md            # This file
 ```
 
-## 🚀 Installation
+## Installation
 
-### 1️⃣ Cloner le repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Tuxplorer/tuxplorer.github.io.git
-cd tuxplorer.github.io
+git clone https://github.com/thomaswithlinux/portfolio2026.git
+cd portfolio2026
 ```
 
-### 2️⃣ Ouvrir localement
+### 2. Open it locally
 
-Ouvre simplement `index.html` dans ton navigateur.
+Simply open `index.html` in your browser.
 
-### 3️⃣ Personnaliser
+### 3. Customize
 
-Édite les fichiers suivants pour ajouter tes infos :
+Edit the following files to add your own information.
 
-**`terminal.js`** - Modifie les commandes et les réponses :
+**`terminal.js`** — change the commands and their answers:
+
 ```javascript
 whoami: {
     description: 'Display current user information',
-    execute: () => 'Ton Nom (Ton Pseudo)\nTa Description'
+    execute: () => 'Your Name (Your Nickname)\nYour Description'
 },
 ```
 
-## 📤 Déployer sur GitHub Pages
+## Deploying to GitHub Pages
 
-### Étape 1 : Créer un repository GitHub
+### Step 1: create a GitHub repository
 
-1. Crée un repository nommé `{username}.github.io` sur GitHub
-2. Remplace `{username}` par ton username GitHub (ex: `tuxplorer.github.io`)
+Create a repository on GitHub and enable **Pages** in its settings
+(**Settings → Pages**, source: `main` branch).
 
-### Étape 2 : Initialiser Git localement
+### Step 2: initialize Git locally
 
 ```bash
 git init
 git add .
 git commit -m "Initial commit: Terminal Portfolio"
-git remote add origin https://github.com/{username}/{username}.github.io.git
+git remote add origin https://github.com/{username}/{repository}.git
 git branch -M main
 git push -u origin main
 ```
 
-### Étape 3 : Accéder à ton portfolio
+### Step 3: reach your portfolio
 
-- **Après ~1-2 minutes**, accède à : `https://{username}.github.io`
-- L'URL de GitHub Pages s'affichera aussi dans les paramètres du repository
+- **After about 1–2 minutes**, open `https://{username}.github.io/{repository}/`
+- The GitHub Pages URL is also shown in the repository settings
 
-### (Optionnel) Configurer un domaine personnalisé
+### (Optional) Configure a custom domain
 
-1. **Achète un domaine** : Namecheap, OVH, etc.
-2. **Ajoute un fichier `CNAME`** à la racine avec ton domaine :
-```
-thomas-letard.me
-```
-3. **Configure les DNS** vers GitHub Pages (voir la doc GitHub)
-4. **Push** :
-```bash
-git add CNAME
-git commit -m "Add custom domain"
-git push
-```
+1. **Buy a domain**: Namecheap, OVH, etc.
+2. **Add a `CNAME` file** at the root with your domain:
+   ```
+   your-domain.example
+   ```
+3. **Configure the DNS** towards GitHub Pages (see the GitHub documentation)
+4. **Push**:
+   ```bash
+   git add CNAME
+   git commit -m "Add custom domain"
+   git push
+   ```
 
-## 💻 Stack technique
+## Tech stack
 
-- **HTML5** - Structure sémantique
-- **CSS3** - Design responsive avec `clamp()` et media queries
-- **JavaScript (Vanilla)** - Aucune dépendance externe
-- **Google Fonts** - Polices monospace (Lilex, JetBrains Mono)
+- **HTML5** — semantic structure
+- **CSS3** — responsive design with `clamp()` and media queries
+- **JavaScript (vanilla)** — no external dependency
+- **Google Fonts** — monospace fonts (Lilex, JetBrains Mono)
 
-## 🎨 Personnalisation
+## Customization
 
-### Changer les informations
+### Change the information
 
-Édite `terminal.js` et mets à jour les objets `commands` :
+Edit `terminal.js` and update the `commands` objects:
 
 ```javascript
 contact: {
     description: 'Display contact information',
-    execute: () => `📧 Email: tonemail@example.com
-📱 Phone: +1 (555) 123-4567
-🌐 GitHub: https://github.com/tonusername
-🌐 Website: https://tonsite.com`
+    execute: () => `Email: you@example.com
+Phone: +00 000 000 000
+GitHub: https://github.com/your-username
+Website: https://your-site.example`
 }
 ```
 
-### Changer les couleurs
+### Change the colors
 
-Édite les variables CSS dans `index.css` :
+Edit the CSS variables in `index.css`:
 
 ```css
 :root {
-    --bg-black: #0a0a0a;        /* Fond */
-    --text-gray: #e0e0e0;       /* Texte */
-    --text-gray-medium: #a0a0a0; /* Texte secondaire */
-    --accent-white: #ffffff;    /* Accent */
+    --bg-black: #0a0a0a;         /* Background */
+    --text-gray: #e0e0e0;        /* Text */
+    --text-gray-medium: #a0a0a0; /* Secondary text */
+    --accent-white: #ffffff;     /* Accent */
 }
 ```
 
-### Ajouter une nouvelle commande
+### Add a new command
 
-Ajoute dans `terminal.js` :
+Add to `terminal.js`:
 
 ```javascript
 mycommand: {
-    description: 'Ma description',
-    execute: () => 'Résultat de ma commande'
+    description: 'My description',
+    execute: () => 'Result of my command'
 }
 ```
 
-## 📱 Responsive
+## Responsive design
 
-Fonctionne parfaitement sur :
-- ✅ Desktop (1920px+)
-- ✅ Tablet (768px - 1024px)
-- ✅ Mobile (480px - 768px)
-- ✅ Petit mobile (360px - 480px)
-- ✅ Landscape (orientation paysage)
-- ✅ Tous les navigateurs modernes
+Works on:
 
-## 🌟 Améliorations futures
+- Desktop (1920px+)
+- Tablet (768px – 1024px)
+- Mobile (480px – 768px)
+- Small mobile (360px – 480px)
+- Landscape orientation
+- All modern browsers
 
-- [ ] Animations au démarrage
-- [ ] Thème clair/sombre
-- [ ] API externe pour les projets
-- [ ] Intégration GitHub API
+## Roadmap
+
+- [ ] Start-up animations
+- [ ] Light/dark theme
+- [ ] External API for the projects
+- [ ] GitHub API integration
 - [ ] PWA (Progressive Web App)
-- [ ] Blog intégré
-- [ ] Mode offline
+- [ ] Built-in blog
+- [ ] Offline mode
 
-## 📞 Contact
+## License
 
-- **Email** : thomasletard3@gmail.com
-- **Phone** : +687 76.84.68
-- **GitHub** : https://github.com/Tuxplorer
-- **Portfolio** : https://thomas-letard.me
+Released under the **MIT** license — see the [LICENSE](LICENSE) file.
 
-## 📝 Licence
+## Author
 
-MIT - Libre d'utilisation et de modification
-
----
-
-**Créé par Thomas Letard (Tuxplorer)** 🐧
-Apprenti TSSR | Koumac, Nouvelle-Calédonie
+**Thomas Letard** — [@thomaswithlinux](https://github.com/thomaswithlinux) ·
+[Portfolio](https://thomaswithlinux.github.io/)
+Apprentice TSSR · Koumac, New Caledonia
